@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Events</title>
+    <script src="jquery.js"></script>
+    <style>
+        body,input{
+            font-family:sans-serif;
+            font-size:20px;
+        }
+        div{
+            width:300px;
+            height:50px;
+            border:1.5px solid green;
+            display:block;
+            cursor:pointer; 
+            margin:10px;
+        }
+        input{
+            width:90%;
+            height:60%;
+            margin-top:8px;
+        }
+    </style>
+</head>
+<body>
+    <div><p id="one">1. Click</p></div>
+    <div id="div2"><p id="two">2. Double Click(toggle)</p></div>
+    <div id="three">3. Mouse enter</div>
+    <div id="four">4. Mouse leave</div>
+    <div id="five">5. Mouse Hover</div>
+    <div>6. <input id="six" type="text" placeholder="mouse enter,leave,down,up"></div>
+    <div>7. <input id="seven" type="text" placeholder="keypress"></div>
+    <div>8. <input id="eight" type="text" placeholder="key down and up"></div>
+    <div>9. <input id="nine" type="text" placeholder="focus blur"></div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#one").click(function(){
+                $(this).hide();
+            });
+        });
+        $(document).ready(function(){
+            $("#div2").dblclick(function(){
+                $("#two").toggle();
+            });
+        });
+        $(document).ready(function(){
+            $("#three").mouseenter(function(){
+                $(this).css("background-color","limegreen")
+            });
+        });
+        $(document).ready(function(){
+            $("#four").mouseleave(function(){
+                $(this).css("background-color","grey")
+            });
+        });
+        $(document).ready(function(){
+            $("#five").hover(function(){
+                $(this).css("box-shadow","0px 0px 8px grey");
+            },
+            function(){
+                $(this).css("box-shadow","none");
+            });
+        });
+        $(document).ready(function(){
+            $("#six").on({
+                mouseenter:function(){
+                    $(this).css("background-color","lightgreen");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","grey");
+                },
+                mousedown:function(){
+                    $(this).css("background-color","red");
+                },
+                mouseup:function(){
+                    $(this).css("background-color","yellow")
+                }
+            });
+        });
+        
+        $(document).ready(function(){
+            $("#seven").keypress(function(){
+                $(this).css("border","2px solid red");
+            });
+        });
+        $(document).ready(function(){
+            $("#eight").on({
+                keydown:function(){
+                    $(this).css("background-color","orange");    
+                },
+                keyup:function(){
+                    $(this).css("background-color","lightgreen");
+                }
+            });
+        });
+        $(document).ready(function(){
+            $("#nine").on({
+                focus:function(){
+                    $(this).css("background-color","aqua");
+                },
+                blur:function(){
+                    $(this).css("background-color","lightgrey");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

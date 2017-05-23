@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM events</title>
+</head>
+<body>
+    <h3 onclick="change(this)">This is Heading 3.</h3>
+    <button onclick="displayDate()">Whats the date?</button>
+    <p id="demo"></p>
+    <script>
+        function change(id){
+            id.innerHTML = "Hello..!";
+        }
+        
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

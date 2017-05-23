@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array | Largest of four</title>
+</head>
+<body>
+	
+
+	<script>
+
+	// Using FOR loop
+		function largestOfFour(arr) {
+  
+  			var largestNumber = [0,0,0,0];
+  
+  			for(i=0; i<arr.length; i++){
+   
+    			for(j=0; j<arr[i].length; j++){
+    
+      				if(arr[i][j] > largestNumber[i]){
+      
+        				largestNumber[i] = arr[i][j];
+      
+      				}
+    			}
+  			}
+  			return largestNumber;
+		}
+
+		document.write(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+		document.write("<br /> <br />");
+
+
+
+
+
+		// Using map-reduce method
+		function largestNum(arr){
+
+			return arr.map(function(subArr){
+
+				return subArr.reduce(function(preNum, currentNum){
+
+					return (currentNum > preNum ? currentNum : preNum);
+
+				}, 0); 
+
+			});
+		}
+
+		document.write(largestNum([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+		document.write("<br /> <br />");
+
+
+		
+
+
+		// Using Math.max() , apply() and map()
+		
+		/* 	
+			console.log(Math.max(4,6,3,9));   // 5
+
+			var num = [4,6 3,9];
+			console.log(Math.max(num));   // NaN
+
+		 	console.log(Math.max.apply(null, num));   // 5
+		*/
+
+		function biggestNum(arr){
+
+			return arr.map(function(subArr){
+
+				return Math.max.apply(null, subArr);
+
+			})
+
+		}
+		document.write(biggestNum([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+	</script>
+</body>
+</html>

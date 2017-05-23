@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>substr | confirm ending</title>
+</head>
+<body>
+	<script>
+	
+	// Using substr() 
+	function confirmEnd(str, target){
+		
+		// if(str.substr(-target.length) === target){
+		// 		return true;
+		// }
+		// else{
+		// 		return false;
+		// }
+
+		// Ternary Operator
+		// return (str.substr(-target.length) === target) ? true : false;  	
+
+		// or JUST
+		return str.substr(-target.length) === target;
+		
+	}
+	console.log(confirmEnd('Confirmation', 'tion'));
+
+	
+	
+
+	// Using endsWith() 
+	function againConfirmEnd(str, target){
+
+		return str.endsWith(target);
+
+	}
+	console.log(againConfirmEnd('World', 'ld'));
+
+	</script>
+</body>
+</html>

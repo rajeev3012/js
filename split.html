@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		function titleCase(str){
+			return str.replace(/\w\S*/g, 
+				function(txt){
+					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+				}
+			);
+		}
+
+		console.log(titleCase('Hello buyinG thIS is worLd'));
+
+
+	var myString = 'This is the most important point.';
+	function toTitleCase(arrayOfString){
+
+		// var comma = ',';
+		// var space = ' ';
+		var dollar = "$";
+		function splitString(stringToSplit, separator){
+			var arrayOfString = stringToSplit.split(separator);
+			
+			console.log('Original string: "' + stringToSplit + '"');
+			console.log("separator: " +separator+ " $ ");
+			console.log(arrayOfString);
+
+			arrayOfString.replace(/\w\S*/g, 
+				function(txt){
+					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+				}
+			);
+
+			// console.log('Array has ' + arrayOfString.length + ' elements: ' + arrayOfString);
+		
+		}
+
+		
+		splitString(myString, dollar);
+
+	}
+		
+
+	toTitleCase(myString);	
+
+		
+	</script>
+
+</body>
+</html>

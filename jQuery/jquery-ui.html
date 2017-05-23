@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="jquery.js"></script>
+        
+        <script src="jquery-ui/jquery-ui.js"></script>
+        
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        
+        <style>
+            
+            #yellowBox{
+                
+                width:300px;
+                height:200px;
+                background-color: yellow;
+                
+            }
+            #redBox{
+                
+                width:300px;
+                height:200px;
+                background-color: red;
+                
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div id="draggable"> Drag Me Horizontally</div>
+        <div id="draggable1"> Drag Me Vertically</div>
+        
+        <div id="yellowBox">
+        
+            <span>I'm stuck inside the box</span>
+        
+        </div>
+        <div id="redBox"></div>
+        <script>
+            
+            $("#draggable").draggable({axis:"x"});
+            $("#draggable1").draggable({axis:"y"});
+            
+            $("span").draggable({containment:"parent"});
+            
+            $("#yellowBox").resizable({
+                grid:100,
+                alsoResize: "#redBox",
+                resize: function(event, ui){
+                    
+                    if($("#yellowBox").width() > 500){
+                        alert("Big Enough!");
+                    }
+                    
+                }
+            });
+            $("#redBox").resizable();
+        </script>
+        
+    </body>
+</html>

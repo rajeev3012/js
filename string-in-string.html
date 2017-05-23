@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        button{
+            width:200px;
+            height:40px;
+            background-color:green;
+            font-size:25px;
+            color:white;
+        }
+        
+        p{
+            width:400px;
+            height:50px;
+            background-color:aqua;
+            font-size:20px;
+            border:5px solid grey;
+            padding:5px;
+            
+        }
+        #sec1, #sec2{
+            float:left;
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <p id="p1">Here word is the word. This is again word of wisdom word."</p>
+    <button onclick="myfunction()">Try it!</button> <br> <br>
+    <div id="sec1">
+        index Of:<p id="demo1"></p>
+        Slice:<p id="demo2"></p>
+        Substring: <p id="demo3"></p>
+        Substr: <p id="demo4"></p>
+        Replace: <p id="demo5"></p>
+        Replace All: <p id="demo6"></p>
+    </div>
+    <div id="sec2">
+        Upper case: <p id="demo7"></p>
+        Lower case: <p id="demo8"></p>
+        Concat: <p id="demo9"></p>
+        Char At: <p id="demo10"></p>
+        Char code at: <p id="demo11"></p>
+    </div>
+    
+    <script>
+    function myfunction(){
+        var str = document.getElementById("p1").innerHTML;
+        //var x = str.search("word");  //search or indexOf/lastIndexOf
+        document.getElementById("demo1").innerHTML = str.indexOf("word");
+        document.getElementById("demo2").innerHTML = str.slice(5,15);
+        document.getElementById("demo3").innerHTML = str.substring(5,15); //can't accept -ve numbers.
+        document.getElementById("demo4").innerHTML = str.substr(4,6); //2nd parameter is length
+        document.getElementById("demo5").innerHTML = str.replace("word","WORLD");
+        document.getElementById("demo6").innerHTML = str.replace(/word/g,"WORLD");
+        document.getElementById("demo7").innerHTML = str.toUpperCase();
+        document.getElementById("demo8").innerHTML = str.toLowerCase();
+        document.getElementById("demo9").innerHTML = str.concat( ""," Final Words");
+        document.getElementById("demo10").innerHTML = str.charAt(0);
+        document.getElementById("demo11").innerHTML = str.charCodeAt(0);
+        
+    }
+    </script>
+    
+</body>
+</html>

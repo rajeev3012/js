@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener</title>
+    
+</head>
+<body>
+    <button id="btn">Try</button>
+    <p id="demo"></p>
+    
+    <div id="div1" style="width:200px;height:45px;border:1px solid grey">Hello World!</div>
+    <p id="demo1"></p>
+    
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click", displayDate);
+        
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+        
+        
+        var x = document.getElementById("div1");
+        x.addEventListener("mouseover",play1);
+        x.addEventListener("click",play2);
+        x.addEventListener("mouseout",play3);
+        function play1(){
+            document.getElementById("demo1").innerHTML += "Mouse over <br>";
+        }
+        function play2(){
+            document.getElementById("demo1").innerHTML += "Mouse Clicked <br>";
+        }
+        function play3(){
+            document.getElementById("demo1").innerHTML += "Mouse Out <br>";
+        }
+        
+        
+        window.addEventListener("resize",function(){
+            document.getElementById("demo2").innerHTML = Math.random();
+        });
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

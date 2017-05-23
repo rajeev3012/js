@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onmouseover and onmouseout</title>
+    
+    <style>
+        #div1,#div2{
+            width:300px;
+            height:40px;
+            background-color:aqua;
+            padding:40px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onmouseover="mOver(this)" onmouseout="mOut(this)">Hover over me.</div>
+    <div id="div2" onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
+    <script>
+        function mOver(obj){
+           obj.innerHTML = "Thank You..!";
+        }
+        function mOut(obj){
+            obj.innerHTML = "Mouse Over me.";
+        }
+        
+        function mDown(obj){
+            obj.innerHTML = "Release Me..!";
+        }
+        function mUp(obj){
+            obj.innerHTML = "Thank You.";
+        }
+    </script>
+</body>
+</html>

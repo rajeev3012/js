@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        
+        <title> Text Change </title>
+        
+        
+        
+    </head>
+    
+    <body>
+        
+        <input type='text' id="inputText">
+        
+        <button id="buttonPanel"> Change Text</button>
+        
+        <p id="text"> Hello World! </p>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("buttonPanel").onclick = function(){
+                
+                var textEntered = "";
+                
+                textEntered = document.getElementById("inputText").value;
+                
+                document.getElementById("text").innerHTML = textEntered;
+                
+                
+            }
+            
+        </script>
+        
+    </body>
+    
+</html>

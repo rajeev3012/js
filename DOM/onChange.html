@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <p>Enter the text in lower case.</p>
+    <input id="input1" type="text" onchange="myFunction()">
+    <script>
+        function myFunction(){
+            var x = document.getElementById("input1");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

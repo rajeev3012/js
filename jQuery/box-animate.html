@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		$("#flip").click(function(){
+			var panel = $("#panel");
+			panel.animate({height:'100px',width:'100px', opacity:'0.1'},"slow");
+			panel.animate({height:'150px',width:'150px', opacity:'0.2'},"slow");
+			panel.animate({height:'200px',width:'200px', opacity:'0.3'},"slow");
+			panel.animate({height:'250px',width:'250px', opacity:'0.4'},"slow");
+			panel.animate({height:'300px',width:'300px', opacity:'0.5'},"slow");
+			panel.animate({height:'350px',width:'350px', opacity:'0.6'},"slow");
+			panel.animate({height:'400px',width:'400px', opacity:'0.8'},"slow");
+			panel.animate({height:'50px',width:'50px', opacity:'0.9'},"slow");
+			
+			
+		});
+	});
+	</script>
+	
+		<style>
+			#panel, #flip{
+				width:400px;
+				height:70px;
+				text-align:center;
+				font-size:30px;
+				font-family:verdana;
+				background-color:green;
+				border:solid 2px gray;
+			}
+		
+			#panel{
+				width:150px;
+				background-color:orange;
+			}
+		</style>
+	
+	</head>
+
+	<body>
+		<div> <button id="flip"> Click to Expand </button></div>
+		<div id="panel"> Hurray...! </div>
+	</body>
+	
+</html>
+

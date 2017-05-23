@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Methods</title>
+    
+    <style>
+        
+        /* Arrangement with Flex Box Technique. */
+        body{
+            font-family:sans-serif;
+            height:600px;
+            border:1px solid white;
+            display:flex;
+            flex-flow:column wrap;
+            justify-content:flex-start;
+        }
+        p{
+            width:600px;
+            height:35px;
+            border:2px solid green;
+            padding:8px 0px 0px 5px;
+            font-size:20px;
+        }
+        h1{
+            background-color:limegreen;
+            width:500px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>Different Array Methods:</u></h1>
+    <p><span>toString : </span><span id="demo"></span></p>
+    <p><span>Join : </span><span id="demo1"></span></p>
+    <p><span>Pop : </span><span id="demo2"></span></p>
+    <p><span>Push : </span><span id="demo3"></span></p>
+    <p><span>Shift : </span><span id="demo4"></span></p>
+    <p><span>Unshift : </span><span id="demo5"></span></p>
+    <p><span>Add using function : </span><span id="demo6"></span></p>
+    <p><span>Delete : </span><span id="demo7"></span></p>
+    <p><span>Spliced in : </span><span id="demo8"></span></p>
+    <p><span>Spliced out : </span><span id="demo9"></span></p>
+    <p><span>Slice : </span><span id="demo10"></span></p>
+    
+    <script>
+        var fruits = ["Apple", "Banana", "Papaya", "Jackfruit"];
+        document.getElementById("demo").innerHTML = fruits.toString();  //By Default(i.e. No need to specify)
+        document.getElementById("demo1").innerHTML = fruits.join(" - ");
+        
+        document.getElementById("demo2").innerHTML = fruits.pop();
+        document.getElementById("demo2").innerHTML = fruits;
+        
+        document.getElementById("demo3").innerHTML = fruits.push("Kiwi");
+        document.getElementById("demo3").innerHTML = fruits;
+        
+        document.getElementById("demo4").innerHTML = fruits.shift();
+        document.getElementById("demo4").innerHTML = fruits;
+        
+        document.getElementById("demo5").innerHTML = fruits.unshift("Orange");
+        document.getElementById("demo5").innerHTML = fruits;
+        
+        document.getElementById("demo6").innerHTML = fruitsAppend();
+        document.getElementById("demo6").innerHTML = fruits;
+        
+        /*  document.getElementById("demo7").innerHTML = delete.fruits[0];
+            document.getElementById("demo7").innerHTML = fruits;  */
+        
+        document.getElementById("demo8").innerHTML = fruits.splice(2, 0, "Lemon","Cherry");
+        document.getElementById("demo8").innerHTML = fruits;
+        
+        document.getElementById("demo9").innerHTML = fruits.splice(2, 2);
+        document.getElementById("demo9").innerHTML = fruits;
+        
+        var citrus = fruits.slice(1,3);
+        document.getElementById("demo10").innerHTML = citrus;
+        
+        function fruitsAppend(){
+            fruits[fruits.length] = "Forest";
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

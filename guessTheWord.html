@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        
+        <title> Text Change </title>
+        
+        
+        
+    </head>
+    
+    <body>
+        
+        <p> What is the Magic Word ? </p>
+        
+        <input id="inputText">
+        
+        <button id="button">Enter</button>
+        
+        <script>
+            
+            document.getElementById("button").onclick = function(){
+                
+                var userWord = document.getElementById("inputText").value;
+                
+                var magicWord = "firedragon";
+                
+                if(userWord == magicWord){
+                    
+                    alert("You got IT..!");
+                    
+                }else{
+                    
+                    alert("OOps.. Try Again.");
+                    
+                }
+                
+            }
+            
+        </script>
+        
+    </body>
+    
+</html>

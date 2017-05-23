@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Hide</title>
+    
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <p id="one">Click on me to Hide.</p>
+    <p id="two">Click on me to Fade.</p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#one").click(function(){
+                $(this).hide();
+            });
+        });
+        
+        $(document).ready(function(){
+            $("#two").click(function(){
+                $(this).fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

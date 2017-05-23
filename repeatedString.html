@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repeat String | while | recursion | repeat()</title>
+</head>
+<body>
+	
+	<script>
+		
+		// Using while loop
+		function repeatStringTimes(str, times){
+			var repeatedStr = "";
+
+			while(times > 0){
+
+				repeatedStr += str;
+
+				times--;
+
+			}	
+			return repeatedStr;
+		}
+		console.log(repeatStringTimes('go ', 4));
+
+
+
+		// Using recursion
+		function repeatStringTimes(str, times){
+
+			if(times < 0){
+				return "";
+			}
+			if(times === 1){
+				return str;
+			}
+			else{
+				return str + repeatStringTimes(str, times-1);
+			}
+		}
+		console.log(repeatStringTimes('up ', 3));
+		
+
+		
+		// Using ES6 repeat() method
+		function repeatStringTimes(str, times){
+
+			//Ternary Operator
+			return times > 0 ? str.repeat(times) : "";		
+
+			// if(times > 0){
+
+			// 	return str.repeat(times);
+			// }
+			// else{
+
+			// 	return "";
+			// }
+		}
+		console.log(repeatStringTimes('down ', 5));
+
+	</script>
+</body>
+</html>

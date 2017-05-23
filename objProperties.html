@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for in loop</title>
+</head>
+<body>
+   <p id="demo"></p>
+    <script>
+        var txt = "";
+        var person = {
+            name:"Rajeev", 
+            address:"Pune", 
+            age:24
+        };
+        person.lName = "Ranjan";
+        delete person.age;
+        var x;
+        for(x in person){
+            txt += person[x] + " ";
+        }
+        
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+</html>

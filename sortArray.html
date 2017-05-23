@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Array</title>
+</head>
+<body>
+    <h3>Click the buttons to sort</h3>
+    
+    <button onclick="function1()">Sort Alphabetically</button>
+    <button onclick="function2()">Sort Numerically</button>
+    
+    <p id="demo0"></p>
+    <p id="demo"></p>
+    
+    <script>
+        var names = ["John", "Robert", "Dan", "Angela"];
+        document.getElementById("demo0").innerHTML = names.sort();
+        
+        var points = [2, 40, 100, 25, 235];
+        document.getElementById("demo").innerHTML = points;
+        
+        function function1(){
+            points.sort();
+            document.getElementById("demo").innerHTML = points;
+        }
+        
+        function function2(){
+            points.sort(function(a,b){ return a-b });   // b-a sorts in decreasing order
+            document.getElementById("demo").innerHTML = points;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array | alice() | push()</title>
+</head>
+<body>
+	 <script>
+	 	// Using slice()
+	 	function arrayCut(arr, num){
+
+	 		return arr.slice(num);
+	 	}
+
+	 	console.log(arrayCut([2,4,6,1,5], 3));
+	 	
+	 	// Using splice()
+	 	function arrayCut(arr, num){
+
+	 		arr.splice(0, num);
+	 		return arr;
+	 	}
+	 	console.log(arrayCut([2,4,6,1,5], 3));
+
+	 </script>
+</body>
+</html>

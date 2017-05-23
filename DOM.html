@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+    <style>
+        img,#rect{
+            width:400px;
+            height:250px;
+        }
+        #rect{
+            height:150px;
+            background-color:coral;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <p>Hi</p>    
+        <p>Hello</p>    
+        <p>Good Morning.</p>    
+    </div>
+    
+    <img id="wallpaper1" src="https://static.pexels.com/photos/36487/above-adventure-aerial-air.jpg" > <br>
+    <a id="link1" href="https://www.google.com">Google</a>
+    <div id="rect"></div>
+    
+    <script>
+        var a = document.getElementById("demo");
+        var arr = a.childNodes;
+        for(var x=0;x<arr.length;x++){
+            arr[x].innerHTML = "Awesome!";
+        }
+        
+        var el = document.getElementById("wallpaper1");
+        el.src = "https://www.planwallpaper.com/static/images/butterfly-wallpaper.jpeg";
+        
+        document.getElementById("link1").href = "https://www.youtube.com";
+        
+        document.getElementById("rect").style.backgroundColor = "red";
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

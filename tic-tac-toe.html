@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        canvas{
+            border:1px solid grey;
+            position:absolute;
+            margin:auto;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+    var canvas, ctx;
+        window.onload = function main(){
+            
+            canvas = document.createElement("canvas");
+            canvas.height = canvas.width = 200;
+            ctx = canvas.getContext("2d");
+            
+            document.body.appendChild(canvas);
+            
+            init();
+            tick();
+            
+        }
+        function init(){
+            
+        }
+        function tick(){
+            window.requestAnimationFrame(tick);
+            
+            update();
+            render();
+        }
+        function update(){
+            
+        }
+        function render(){
+            
+        }
+    </script>
+    
+</body>
+</html>

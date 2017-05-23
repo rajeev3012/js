@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Box1 DOM animation
+        Box2 css animation
+   -->
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        #container{
+            width:400px;
+            height:400px;
+            background-color:yellow;
+            position:relative;
+        }
+        #box{
+            width:50px;
+            height:50px;
+            background-color:green;
+            position:absolute;
+        }
+        #box2{
+            width:50px;
+            height:50px;
+            background-color:red;
+            position:absolute;
+            animation-name:myBox;
+            animation-duration:5s;
+        }
+        @keyframes myBox{
+            0%{top:0px;left:0px}
+            50%{top:0px;left:350px}
+            100%{top:350px;left:350px}
+        }
+    </style>
+</head>
+<body>
+    <button onclick="move()">Click Me!</button>
+    <div id="container">
+        <div id="box"></div>
+        <div id="box2"></div>
+    </div>
+    
+    <script>
+        function move(){
+            var elem = document.getElementById("box");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+            function frame(){
+                if(pos==350){
+                    clearInterval(id);
+                }
+                else{
+                    pos++;
+                    elem.style.top = pos+ "px";
+                    elem.style.left = pos+ "px";
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

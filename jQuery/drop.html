@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>Droppables</title>
+        
+        <script src="jquery.js"></script>
+        
+        <script src="jquery-ui/jquery-ui.js"></script>
+        
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        
+        <style>
+            
+            #yellow{
+                
+                width: 100px;
+                height:100px;
+                background-color:yellow;
+                
+                
+            }
+            #green{
+                
+                width: 400px;
+                height:400px;
+                background-color: green;
+                
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div id="yellow"></div>
+        
+        <div id="green"></div>
+        
+        <script>
+            
+            $("#yellow").draggable();
+            
+            $("#green").droppable({
+                
+                drop: function(event, ui){
+                    alert("Dropped!");
+                }
+                
+            });
+            
+        </script>
+        
+    </body>
+</html>

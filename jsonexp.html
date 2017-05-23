@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Example</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+    
+    <script>
+    
+        var text = '{"employee": 
+                        [
+                            +'{"name":"John Cena", "address":"London", "age":"23"},'
+                            +'{"name":"Robert Gale", "address":"Washington", "age":"32"},'
+                            +'{"name":"Mary Jane", "address":"Birmingham", "age":"33"}
+                        ]
+                    }';
+        
+        var obj = JSON.parse(text);
+        
+        document.getElementById("demo").innerHTML = employee[0]["name"]="Gayle"+ "<br>" +employee[0]["address"]+ "<br>" +employee[0].age;
+        
+    </script>
+    
+</body>
+</html>
