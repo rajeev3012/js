@@ -1,0 +1,24 @@
+#tab{
+	overflow:hidden;
+	border:1px solid black;
+	background-color:#ccc;
+}
+#tab li{
+	float:left;
+	padding: 10px;
+	list-style-type: none;
+	cursor:pointer;
+	transition:.4s;
+}
+#tab li:hover{
+	background-color:limegreen;
+}
+#tab li.active{
+	background-color:green;
+	color:white;
+}
+.tabContent{
+	display:none;
+	padding:10px;
+	animation: fadeEffect 1s;
+}

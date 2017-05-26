@@ -1,0 +1,1 @@
+Simple info loaded with the help of AJAX.
