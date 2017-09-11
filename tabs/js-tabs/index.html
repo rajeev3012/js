@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<!--
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+    <div id="tab">
+        
+        <button class="tablink" onclick="openTab(event,'content1')" >Mumbai</button>
+        <button class="tablink" onclick="openTab(event,'content2')" id="defaultOpen">Pune</button>
+        <button class="tablink" onclick="openTab(event,'content3')">Bangalore</button>
+        
+    </div>
+        
+    <div id="content1" class="tabcontent">
+        <h1>Mumbai</h1> 
+        <p>City of Movies and Fashion.</p>
+    </div>
+    <div id="content2" class="tabcontent">
+       <h1>Pune</h1>
+        <p>City of Culture and Education.</p> 
+    </div>
+    <div id="content3" class="tabcontent">
+       <h1>Bangalore</h1>
+        <p>City of Electronics.</p> 
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

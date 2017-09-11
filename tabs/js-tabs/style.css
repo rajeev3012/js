@@ -1,0 +1,25 @@
+body{
+    font-family:sans-serif;
+}
+#tab{
+    display:flex;
+}
+button{
+    padding:10px 20px;
+    
+    border-right:1px solid;
+    cursor:pointer;
+}
+.tab:last-child{
+    border-right:none;
+}
+button:hover{
+    background-color: lime;
+}
+.tabcontent{
+    display:none;
+}
+div#tab button.active{
+    background-color:green;
+    color:white;
+}
